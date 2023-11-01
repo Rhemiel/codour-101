@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Codour</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+        li {
+            float: left;
+            }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        li a:hover {
+            background-color: #111;
+            }
+       .active {
+            background-color: #2b2eff;
+            }
+       form{
+           float: left;
+       }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar-->
-    <div>
+    <div class="navBar">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a class="active" href="#">Home</a></li>
             <li><a href="#">Tutorials</a></li>
             <li><a href="#">Exercises</a></li>
             <li><a href="#">About</a></li>
@@ -27,7 +59,7 @@
     </div>
     <div>
         <center><h2>HTML Courses</h2></center>
-        <center>
+        <center class="homeContent">
             <form action="classes.html">
                 <img src="classes.png" alt="classes">
                 <p>Sample intro for classes.</p>
