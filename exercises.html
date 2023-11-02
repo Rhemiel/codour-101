@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Other head elements (e.g., title, meta tags) -->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <title>Codour</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .navOp {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+        .navOp li {
+            float: left;
+            border-right: 1px solid #bbb;
+            }
+        .navOp li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        .navOp li a:hover {
+            background-color: #111;
+            }
+        .active {
+            background-color: #2b2eff;
+            }
+        /* Style for the sidebar */
+        .sidebar {
+            position: absolute;
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            height: 500px;
+            overflow: auto;
+            display: none;
+        }
+
+        .sidebar h2 {
+            margin: 0;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 5px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .closeSidePanel{
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+        .sideButton li div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #bbb;
+            margin: 5px;
+            border-radius: 50px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .selectionBar i{
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .exerciseButton{
+            border: 1px solid #bbb;
+            background-color: #333;
+            width: 90%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+        }
+
+        .mainExer{
+            display: none;
+        }
+
+        /* Responsiveness */
+        @media (min-width: 344px) and (max-width: 804px){
+            .footer-content {
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar-->
+    <div class="navBar">
+        <ul class="navOp">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a class="active" href="exercises.html">Exercises</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="sidebar" id = "sb">
+        <span class = "closeSidePanel" id = "closeNav">&times;</span>
+        <h2>Exercises</h2>
+        <ul class="sideButton">
+            <li><div class = "optionButton" id = "a" data-element = "fe">HTML Attributes</div></li>
+            <li><div class = "optionButton" id = "b" data-element = "se">HTML Headings</div></li>
+            <li><div class = "optionButton" id = "c">HTML Paragraph</div></li>
+            <li><div class = "optionButton" id = "d">HTML Styles</div></li>
+            <li><div class = "optionButton" id = "e">HTML Formatting</div></li>
+            <li><div class = "optionButton" id = "f">HTML Qoutations</div></li>
+            <li><div class = "optionButton" id = "g">HTML Comments</div></li>
+            <li><div class = "optionButton" id = "h">HTML CSS</div></li>
+            <li><div class = "optionButton" id = "i">HTML Links</div></li>
+            <li><div class = "optionButton" id = "j">HTML Images</div></li>
+            <li><div class = "optionButton" id = "k">HTML Tables</div></li>
+            <li><div class = "optionButton" id = "l">HTML Lists</div></li>
+            <li><div class = "optionButton" id = "m">HTML Classes</div></li>
+            <li><div class = "optionButton" id = "n">HTML Id</div></li>
+            <li><div class = "optionButton" id = "o">HTML Iframes</div></li>
+            <li><div class = "optionButton" id = "p">HTML Scripts</div></li>
+            <li><div class = "optionButton" id = "q">HTML Computercode</div></li>
+            <li><div class = "optionButton" id = "r">HTML Forms</div></li>
+            <li><div class = "optionButton" id = "s">HTML Form Attributes</div></li>
+            <li><div class = "optionButton" id = "t">HTML Form Elements</div></li>
+            <li><div class = "optionButton" id = "u">HTML Input Types</div></li>
+            <li><div class = "optionButton" id = "v">HTML Input Attributes</div></li>
+        </ul>
+    </div>
+    <span class="selectionBar"><i class="fa-solid fa-bars" id = "sbBar"></i><span>
+    <center>
+        <div class="content">
+            <h1>Exercises</h1>
+            <section class = "toggleSection" id = "fe">
+                <h3>HTML Attributes</h3>
+                <div>
+                    <div class="exerciseButton" id = "exer1" data-element="mainExer1">Exercise 1</div>
+                    <div class="mainExer" id="mainExer1">Test 1</div>
+                </div>
+                <div>
+                    <div class="exerciseButton" id = "exer2" data-element="mainExer2">Exercise 2</div>
+                    <div class="mainExer" id="mainExer2">Test 2</div>
+                </div>
+                <div>
+                    <div class="exerciseButton" id = "exer3" data-element="mainExer3">Exercise 3</div>
+                    <div class="mainExer" id="mainExer3">Test 3</div>
+                </div>
+                <div>
+                    <div class="exerciseButton" id = "exer4" data-element="mainExer4">Exercise 4</div>
+                    <div class="mainExer" id="mainExer4">Test 4</div>
+                </div>
+            </section>
+            <section class = "toggleSection" style = "display: none;" id = "se">
+                <h3>HTML Headings</h3>
+                <div>
+                    <div class="exerciseButton" id = "exer4" data-element="mainExer4">Exercise 1</div>
+                    <div class="mainExer" id="mainExer4">Test 1</div>
+                </div>
+                <div>
+                    <div class="exerciseButton" id = "exer5" data-element="mainExer5">Exercise 2</div>
+                    <div class="mainExer" id="mainExer5">Test 2/div>
+                </div>
+                <div>
+                    <div class="exerciseButton" id = "exer6" data-element="mainExer6">Exercise 3</div>
+                    <div class="mainExer" id="mainExer6">Test 3</div>
+                </div>
+            </section>
+        </div>
+    </center>
+     <script>
+        //Control Variables
+        const sbNav = document.getElementById("sb");
+        const sbButton = document.getElementById("sbBar");
+        const cNav = document.getElementById("closeNav");
+        const showExerciseButtons = document.querySelectorAll(".exerciseButton");
+        const showExerciseOptions = document.querySelectorAll(".optionButton");
+        const elementsToHide = document.querySelectorAll(".toggleSection");
+
+        function showNav(){
+            sbNav.style.display = "block";
+        }
+
+        function hideNav(){
+            sbNav.style.display = "none";
+        }
+
+        function showExercise(event){
+            const button = event.target;
+            const elementId = button.getAttribute("data-element");
+            const targetElement = document.getElementById(elementId);
+
+            if(targetElement){
+                if(targetElement.style.display === "none" || targetElement.style.display === ""){
+                    targetElement.style.display = "block";
+                } else {
+                    targetElement.style.display = "none";
+                }
+            }
+        }
+
+        function hideAllSection(){
+            elementsToHide.forEach(element => {
+                element.style.display = "none";
+            });
+        }
+
+        function showSelectedOption(event){
+            const _button = event.target;
+            const _elementId = _button.getAttribute("data-element");
+            const _targetElement = document.getElementById(_elementId);
+            hideAllSection();
+            if(_targetElement){
+                if(_targetElement.style.display === "none" || _targetElement.style.display === ""){
+                    _targetElement.style.display = "block";
+                } else {
+                    _targetElement.style.display = "none";
+                }
+            }
+        }
+
+
+        sbButton.addEventListener("click", showNav);
+        cNav.addEventListener("click", hideNav);
+        showExerciseButtons.forEach(button => {
+            button.addEventListener("click", showExercise);
+        });
+        showExerciseOptions.forEach(button => {
+            button.addEventListener("click", showSelectedOption);
+        });
+    </script>
+</body>
+</html>
