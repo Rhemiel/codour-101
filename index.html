@@ -2,44 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Other head elements (e.g., title, meta tags) -->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
     <title>Codour</title>
     <style>
         body {
             margin: 0;
             padding: 0;
         }
-        ul {
+        .navOp {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: #333;
             }
-        li {
+        .navOp li {
             float: left;
             }
-        li a {
+        .navOp li a {
             display: block;
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             }
-        li a:hover {
+        .navOp li a:hover {
             background-color: #111;
             }
        .active {
             background-color: #2b2eff;
             }
-       form{
-           float: left;
-       }
+       .content{
+            margin: 10px;
+           }
+        form{
+            border: 1px solid black;
+            border-radius: 5%;
+            min-height: 400px;
+            margin: 10px;
+        }
+        /* Style for the footer */
+        footer {
+            padding: 20px 0;
+            text-align: center;
+            margin: 10px;
+        }
+
+        /* Style for the footer content */
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Style for the contact information section */
+        .contact-info {
+            text-align: left;
+        }
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the useful links section */
+        .useful-links {
+            text-align: center;
+        }
+
+        .useful-links h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .useful-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .useful-links ul li {
+            margin: 5px 0;
+        }
+
+        .useful-links ul li a {
+            text-decoration: none;   
+            color: #333;
+        }
+
+        /* Style for the social media section */
+        .social-media {
+            text-align: right;
+        }
+
+        .social-media h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .social-media ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-media ul li {
+            display: inline;
+            margin: 0 10px;
+            }
+
+        .social-media ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            }
+
+        /* Style for the copyright notice */
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+            }
+
     </style>
 </head>
 <body>
     <!-- Navigation Bar-->
     <div class="navBar">
-        <ul>
+        <ul class="navOp">
             <li><a class="active" href="#">Home</a></li>
             <li><a href="#">Tutorials</a></li>
             <li><a href="#">Exercises</a></li>
@@ -53,9 +141,9 @@
             <img src="bg.png" alt="header pic">
         </div>
     </center>
-    <div>
+    <div class="content">
         <center><h2>Introduction</h2></center>
-        <center><p>Lorem Ipsum</p></center>
+        <center><p>Welcome to Codour - Your Gateway to HTML Mastery! Whether you're a complete beginner or looking to level up your web development skills, you've come to the right place. Our website is your go-to resource for learning the fundamentals of HTML. Get ready to dive into the world of web design and start creating stunning web pages from scratch. Let's embark on this exciting journey together!</p></center>
     </div>
     <div>
         <center><h2>HTML Courses</h2></center>
@@ -79,7 +167,34 @@
     </div>
     <footer>
         <center><h2>Footer</h2></center>
-        <Center><p>Lorem Ipsum</p></Center>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: contact@yourwebsite.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+            <div class="useful-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Connect with Us</h3>
+                 <ul>
+                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                 </ul>
+            </div>
+       </div>
+       <div class="copyright">
+           <p>&copy; 2023 Codour. All rights reserved.</p>
+       </div>
     </footer>
 </body>
 </html>
