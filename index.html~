@@ -2,15 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Other head elements (e.g., title, meta tags) -->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
     <title>Codour</title>
-    <script>
-    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .navOp {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+        .navOp li {
+            float: left;
+            }
+        .navOp li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        .navOp li a:hover {
+            background-color: #111;
+            }
+       .active {
+            background-color: #2b2eff;
+            }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar-->
-    <div>
-        <ul>
-            <li><a href="#">Home</a></li>
+    <div class="navBar">
+        <ul class="navOp">
+            <li><a class="active" href="#">Home</a></li>
             <li><a href="#">Tutorials</a></li>
             <li><a href="#">Exercises</a></li>
             <li><a href="#">About</a></li>
@@ -23,33 +53,64 @@
             <img src="bg.png" alt="header pic">
         </div>
     </center>
-    <div>
+    <div class="content">
         <center><h2>Introduction</h2></center>
-        <center><p>Lorem Ipsum</p></center>
+        <center><p>Welcome to Codour - Your Gateway to HTML Mastery! Whether you're a complete beginner or looking to level up your web development skills, you've come to the right place. Our website is your go-to resource for learning the fundamentals of HTML. Get ready to dive into the world of web design and start creating stunning web pages from scratch. Let's embark on this exciting journey together!</p></center>
     </div>
     <div>
         <center><h2>HTML Courses</h2></center>
         <center>
-            <form action="classes.html">
-                <img src="classes.png" alt="classes">
-                <p>Sample intro for classes.</p>
-                <input type="submit" value = "View">
-            </form>
-            <form action = "history.html">
-                <img src="history.png" alt="history">
-                <p>Short description about history of html</p>
-                <input type="submit" value = "View">
-            </form>
-            <form>
-                <img src="features.png" alt="features">
-                <p>Short description for features</p>
-                <input type="submit" value="View">
-            </form>
+        		<form action="classes.html">
+                		<img src="classes.png" alt="classes">
+                		<p>Sample intro for classes.</p>
+                		<input type="submit" value = "View">
+            		</form>
+ 
+        	
+        				<form action = "history.html">
+                		<img src="history.png" alt="history">
+                		<p>Short description about history of html</p>
+                		<input type="submit" value = "View">
+            		</form>
+        		
+        			
+        				<form>
+                		<img src="features.png" alt="features">
+                		<p>Short description for features</p>
+               		<input type="submit" value="View">
+           	 		</form>
         </center>
     </div>
-    <footer>
+	<footer>
         <center><h2>Footer</h2></center>
-        <Center><p>Lorem Ipsum</p></Center>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: contact@yourwebsite.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+            <div class="useful-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Connect with Us</h3>
+                 <ul>
+                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                 </ul>
+            </div>
+       </div>
+       <div class="copyright">
+           <p>&copy; 2023 Codour. All rights reserved.</p>
+       </div>
     </footer>
 </body>
 </html>

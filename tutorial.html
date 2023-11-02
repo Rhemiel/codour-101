@@ -2,16 +2,240 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Other head elements (e.g., title, meta tags) -->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
     <title>Codour</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .navOp {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+        .navOp li {
+            float: left;
+            }
+        .navOp li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+        .navOp li a:hover {
+            background-color: #111;
+            }
+        .active {
+            background-color: #2b2eff;
+            }
+        /* Style for the sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            height: 500px;
+            overflow: auto;
+        }
+
+        .sidebar h2 {
+            margin: 0;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 5px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Style for the main content */
+        .content {
+            margin-left: 270px; /* To allow space for the sidebar */
+            padding: 20px;
+        }
+
+        /* Additional styles for better appearance */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        /* Style for the footer */
+        footer {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Style for the footer content */
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Style for the contact information section */
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the useful links section */
+        .useful-links {
+            text-align: center;
+        }
+
+        .useful-links h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .useful-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .useful-links ul li {
+            margin: 5px 0;
+        }
+
+        .useful-links ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Style for the social media section */
+        .social-media {
+            text-align: right;
+        }
+
+        .social-media h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .social-media ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-media ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-media ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+        }
+
+        /* Style for the copyright notice */
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        /* Responsiveness */
+        @media (min-width: 344px) and (max-width: 804px){
+            .footer-content {
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Codour 101 Tutorial</h1>
-    <ul>
-        <li>1st Tutorial</li>
-        <li>2nd Tutorial</li>
-        <li>3rd Tutorial</li>
-        <li>4th Tutorial</li>
-        <li>5th Tutorial</li>
-    </ul>
+    <!-- Navigation Bar-->
+    <div class="navBar">
+        <ul class="navOp">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="tutorial.html">Tutorials</a></li>
+            <li><a href="#">Exercises</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        <h2>Tutorials</h2>
+        <ul>
+            <li><div>HTML Attributes<div></li>
+            <li><div>HTML Headings<div></li>
+            <li><div>HTML Paragraph<div></li>
+            <li><div>HTML Styles<div></li>
+            <li><div>HTML Formatting<div></li>
+            <li><div>HTML Qoutations<div></li>
+            <li><div>HTML Comments<div></li>
+            <li><div>HTML CSS<div></li>
+            <li><div>HTML Links<div></li>
+            <li><div>HTML Images<div></li>
+            <li><div>HTML Tables<div></li>
+            <li><div>HTML Lists<div></li>
+            <li><div>HTML Classes<div></li>
+            <li><div>HTML Id<div></li>
+            <li><div>HTML Iframes</li>
+            <li><div>HTML Scripts<div></li>
+            <li><div>HTML Computercode<div></li>
+            <li><div>HTML Forms<div></li>
+            <li><div>HTML Form Attributes<div></li>
+            <li><div>HTML Form Elements<div></li>
+            <li><div>HTML Input Types<div></li>
+            <li><div>HTML Input Attributes<div></li>
+        </ul>
+    </div>
+	<footer>
+        <center><h2>Footer</h2></center>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: contact@yourwebsite.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+            <div class="useful-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Codour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
