@@ -1,62 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Other head elements (e.g., title, meta tags) -->
-    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
-    <title>Codour</title>
+    <meta charset="utf-8" />
+    <title>Codour Examples</title>
     <style>
         body {
             margin: 0;
             padding: 0;
         }
+
         .navOp {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: #333;
-            }
+        }
+
         .navOp li {
             float: left;
             border-right: 1px solid #bbb;
-            }
+        }
+
         .navOp li a {
             display: block;
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            }
+        }
+
         .navOp li a:hover {
             background-color: #111;
-            }
+        }
+
         .active {
             background-color: #2b2eff;
-            }
-        .content{
-            display: block;
         }
-        .selection{
-            display: flex;
-            justify-content: center;
-            }
-        form {
-            position: relative;
-            border: 1px solid black;
-            border-radius: 5%;
-            margin: 5px;
-            height: 400px;
-            width: 31%;
-            display: flex;
-            }
-        .viewButton {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: 10px;
-            }
+
         /* Style for the footer */
         footer {
             padding: 20px 0;
@@ -129,7 +111,7 @@
             text-decoration: none;
             color: #333;
             font-size: 20px;
-        }
+            }
 
         /* Style for the copyright notice */
         .copyright {
@@ -138,15 +120,7 @@
             color: #777;
         }
         /* Responsiveness */
-        @media (min-width: 344px) and (max-width: 804px){
-            form {
-                border: 1px solid black;
-                border-radius: 5%;
-                margin: 5px;
-                height: 400px;
-                width: 95%;
-                display: block;
-            }
+        @media (min-width: 344px) and (max-width: 804px) {
             .footer-content {
                 display: inline-flex;
                 justify-content: space-between;
@@ -159,43 +133,13 @@
     <!-- Navigation Bar-->
     <div class="navBar">
         <ul class="navOp">
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="tutorial.html">Tutorials</a></li>
             <li><a href="exercises.html">Exercises</a></li>
-            <li><a href="examples.html">Examples</a></li>
+            <li><a class="active" href="examples.html">Examples</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </div>
-    <!-- Header -->
-    <center>
-        <div>
-            <img src="bg.png" alt="header pic">
-        </div>
-    </center>
-    <div class="content">
-        <center><h2>Introduction</h2></center>
-        <center><p>Welcome to Codour - Your Gateway to HTML Mastery! Whether you're a complete beginner or looking to level up your web development skills, you've come to the right place. Our website is your go-to resource for learning the fundamentals of HTML. Get ready to dive into the world of web design and start creating stunning web pages from scratch. Let's embark on this exciting journey together!</p></center>
-    </div>
-    <center><h2>HTML Courses</h2></center>
-    <center>
-        <div class="selection">
-            <form action="classes.html">
-                <img src="classes.png" alt="classes">
-                <p>Sample intro for classes.</p>
-                <input class="viewButton" type="submit" value="View">
-            </form>
-            <form action="history.html">
-                <img src="history.png" alt="history">
-                <p>Short description about history of html</p>
-                <input class="viewButton" type="submit" value="View">
-            </form>
-            <form>
-                <img src="features.png" alt="features">
-                <p>Short description for features</p>
-                <input class="viewButton" type="submit" value="View">
-            </form>
-        </div>
-    </center>
     <footer>
         <center><h2>Footer</h2></center>
         <div class="footer-content">
@@ -229,4 +173,3 @@
     </footer>
 </body>
 </html>
-
