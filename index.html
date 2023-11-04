@@ -48,8 +48,9 @@
             border-radius: 5%;
             margin: 5px;
             height: 400px;
+            padding: 5px;
             width: 31%;
-            display: flex;
+            display: block;
             }
         .viewButton {
             position: absolute;
@@ -57,6 +58,10 @@
             right: 0;
             margin: 10px;
             }
+
+        .features{
+            text-align:left;
+        }
         /* Style for the footer */
         footer {
             padding: 20px 0;
@@ -147,6 +152,7 @@
                 border: 1px solid black;
                 border-radius: 5%;
                 margin: 5px;
+                padding: 5px;
                 height: 400px;
                 width: 95%;
                 display: block;
@@ -177,31 +183,25 @@
         </div>
     </center>
     <div class="content">
-        <center><h2>Introduction</h2></center>
         <center><p>Welcome to Codour - Your Gateway to HTML Mastery! Whether you're a complete beginner or looking to level up your web development skills, you've come to the right place. Our website is your go-to resource for learning the fundamentals of HTML. Get ready to dive into the world of web design and start creating stunning web pages from scratch. Let's embark on this exciting journey together!</p></center>
     </div>
-    <center><h2>HTML Courses</h2></center>
     <center>
         <div class="selection">
-            <form action="classes.html">
-                <img src="classes.png" alt="classes">
-                <p>Sample intro for classes.</p>
-                <input class="viewButton" type="submit" value="View">
+            <form>
+                <h4>What Codour Offers?</h4>
+                <img src="history.png" alt="history">
+                <p>Short description about features of codour</p>
+                <input type="button" class="viewButton" value="View" />
             </form>
             <form action="history.html">
+                <h4>History of HTML</h4>
                 <img src="history.png" alt="history">
                 <p>Short description about history of html</p>
-                <input class="viewButton" type="submit" value="View">
-            </form>
-            <form>
-                <img src="features.png" alt="features">
-                <p>Short description for features</p>
                 <input class="viewButton" type="submit" value="View">
             </form>
         </div>
     </center>
     <footer>
-        <center><h2>Footer</h2></center>
         <div class="footer-content">
             <div class="contact-info">
                 <h4>Contact Us</h4>
@@ -211,10 +211,11 @@
             <div class="useful-links">
                 <h4>Useful Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tutorial.html">Tutorials</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </div>
             <div class="social-media">

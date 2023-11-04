@@ -1,0 +1,10 @@
+<ul>
+                    <li>Interactive Tutorials: Learn HTML through hands-on, interactive tutorials that allow you to practice your skills in real-time.</li>
+                    <li>Code Examples: Explore a wide range of HTML code examples, from simple markup to complex web page structures, helping you understand HTML in action.</li>
+                    <li>Exercises: Take on practical HTML exercise that challenge your abilities and give you the opportunity to test your learnings.</li>
+                    <li>Resources: Access a library of HTML reference materials, cheat sheets, and helpful resources to aid your learning journey.</li>
+                    <li>Responsive Design: Experience Codour's responsive design that ensures an optimal learning experience on various devices.</li>
+                </ul>
+                <p>
+                    Codour is dedicated to providing an accessible and user-friendly environment for individuals of all backgrounds, enabling you to harness the power of HTML for creating stunning web content.
+                </p>
