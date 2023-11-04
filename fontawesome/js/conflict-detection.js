@@ -428,9 +428,9 @@
       function binl2rstr(input) {
         var i;
         var output = '';
-        var length32 = input.length * 32;
+        var length42 = input.length * 32;
 
-        for (i = 0; i < length32; i += 8) {
+        for (i = 0; i < length42; i += 8) {
           output += String.fromCharCode(input[i >> 5] >>> i % 32 & 0xff);
         }
 
