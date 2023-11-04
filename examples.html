@@ -36,7 +36,44 @@
         }
 
         .active {
-            background-color: #2b2eff;
+            background-color: #2B3499;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sample {
+            margin: 2px;
+            border: 1px solid #bbb;
+            background-color: #333;
+            width: 50%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+        }
+
+        .sampleContent {
+            display: none;
+            justify-content: center;
+            align-items: start;
+            background-color: black;
+            width: 50%;
+        }
+
+        .mainText{
+            text-align: left;
+        }
+
+        pre{
+            color: green;
         }
 
         /* Style for the footer */
@@ -140,6 +177,155 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </div>
+    <div class="examples">
+        <section class="container">
+            <div class="sample" id="sample1" data-element="sampleContent1">Example 1</div>
+            <div class="sampleContent" id="sampleContent1">
+                <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Hello, World!&lt;/h1&gt;
+            &lt;p&gt;This is a simple HTML page.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre>
+            </div>
+            <div class="sample" id="sample2" data-element="sampleContent2">Example 2</div>
+            <div class="sampleContent" id="sampleContent2">
+                <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Links and Images&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;HTML Links and Images&lt;/h1&gt;
+            &lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+            &lt;img src="image.jpg" alt="Image Description"&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre>
+            </div>
+            <div class="sample" id="sample3" data-element="sampleContent3">Example 3</div>
+            <div class="sampleContent" id="sampleContent3">
+                <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Unordered List&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Fruits&lt;/h1&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Apple&lt;/li&gt;
+                &lt;li&gt;Banana&lt;/li&gt;
+                &lt;li&gt;Orange&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre>
+            </div>
+            <div class="sample" id="sample4" data-element="sampleContent4">Example 4</div>
+            <div class="sampleContent" id="sampleContent4">
+                <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Ordered List&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Steps&lt;/h1&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Prepare ingredients&lt;/li&gt;
+                &lt;li&gt;Cook the meal&lt;/li&gt;
+                &lt;li&gt;Serve and enjoy&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre>
+            </div>
+            <div class="sample" id="sample5" data-element="sampleContent5">Example 5</div>
+            <div class="sampleContent" id="sampleContent5">
+                <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Contact Form&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Contact Us&lt;/h1&gt;
+            &lt;form&gt;
+                &lt;label for="name"&gt;Name:&lt;/label&gt;
+                &lt;input type="text" id="name" name="name" required&gt;
+                &lt;label for="email"&gt;Email:&lt;/label&gt;
+                &lt;input type="email" id="email" name="email" required&gt;
+                &lt;label for="message"&gt;Message:&lt;/label&gt;
+                &lt;textarea id="message" name="message" required&gt;&lt;/textarea&gt;
+                &lt;button type="submit&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre>
+            </div>
+            <div class="sample" id="sample6" data-element="sampleContent6">Example 6</div>
+            <div class="sampleContent" id="sampleContent6">
+                <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Table Example&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Student Grades&lt;/h1&gt;
+            &lt;table border="1"&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Name&lt;/th&gt;
+                    &lt;th&gt;Math&lt;/th&gt;
+                    &lt;th&gt;Science&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;John&lt;/td&gt;
+                    &lt;td&gt;95&lt;/td&gt;
+                    &lt;td&gt;88&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Alice&lt;/td&gt;
+                    &lt;td&gt;89&lt;/td&gt;
+                    &lt;td&gt;92&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre>
+            </div>
+            <div class="sample" id="sample7" data-element="sampleContent7">Example 7</div>
+            <div class="sampleContent" id="sampleContent7">
+                <pre>
+         &lt;!DOCTYPE html&gt;
+         &lt;html&gt;
+         &lt;head&gt;
+             &lt;title&gt;Audio and Video&lt;/title&gt;
+         &lt;/head&gt;
+         &lt;body&gt;
+             &lt;h1&gt;Listen to Music&lt;/h1&gt;
+             &lt;audio controls&gt;
+                 &lt;source src="music.mp3" type="audio/mpeg&gt;
+             &lt;/audio&gt;
+             &lt;h1&gt;Watch a Video&lt;/h1&gt;
+             &lt;video controls width="320" height="240"&gt;
+                 &lt;source src="video.mp4" type="video/mp4&gt;
+             &lt;/video&gt;
+         &lt;/body&gt;
+         &lt;/html&gt;
+                </pre>
+            </div>
+        </section>
+    </div>
+    
     <footer>
         <center><h2>Footer</h2></center>
         <div class="footer-content">
