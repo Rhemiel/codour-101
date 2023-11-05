@@ -115,7 +115,17 @@ h1, h2 {
 
 .mainExer {
     display: none;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px 20px;
+    background-color: #999;
 }
+
+pre{
+    white-space: pre-wrap;
+}
+
 .content{
     text-align: center;
 }
