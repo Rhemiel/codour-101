@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.navOp {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+    .navOp li {
+        float: left;
+        border-right: 1px solid #bbb;
+    }
+
+        .navOp li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            .navOp li a:hover {
+                background-color: #111;
+            }
+
+.active {
+    background-color: #2B3499;
+}
+/* Style for the sidebar */
+.sidebar {
+    position: absolute;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    overflow: auto;
+    display: none;
+}
+
+    .sidebar h2 {
+        margin: 0;
+        padding: 10px;
+        color: #fff;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+            margin: 5px 0;
+        }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+.closeSidePanel {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.sideButton li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #bbb;
+    margin: 5px;
+    border-radius: 50px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.selectionBar i {
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+.toggleSection {
+    width: 100%; /* Set the width of the container */
+    height: 100vh; /* Set the container to cover the entire viewport height */
+    text-align: center; /* Center horizontally */
+}
+
+.exerciseButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px 20px;
+    background-color: #333;
+    border: 1px solid white;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+.mainExer {
+    display: none;
+}
+.content{
+    text-align: center;
+}
+
+.exerciseButton:hover {
+    background-color: #111;
+}
+
+.optionButton:hover {
+    background-color: #111;
+}
+
+
+/* Responsiveness */
+@media (min-width: 0px) and (max-width: 804px) {
+    .footer-content {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

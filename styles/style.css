@@ -1,8 +1,4 @@
 ﻿body {
-    background-image: url("resources/bg.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%; /* or 'contain' if you prefer */
-    background-position: center;
     animation: slideIn 1s ease-in-out;
 }
 
