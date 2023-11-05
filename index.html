@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Other head elements (e.g., title, meta tags) -->
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Codour</title>
     <style>
+        /*Animations*/
+        @keyframes upAndDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -36,7 +48,14 @@
             background-color: #2B3499;
         }
         .content{
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            width: 400px;
+            height: 400px;
+            animation: upAndDown 2s ease-in-out infinite
         }
         .selection{
             display: flex;
@@ -51,12 +70,18 @@
             padding: 5px;
             width: 31%;
             display: block;
-            }
+            background: url("resources/logo.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         .viewButton {
             position: absolute;
             bottom: 0;
             right: 0;
             margin: 10px;
+            height: 45px;
+            width: 100px;
+            border-radius: 100%;
             }
 
         .features{
@@ -178,25 +203,18 @@
     </div>
     <!-- Header -->
     <center>
-        <div>
-            <img src="bg.png" alt="header pic">
+        <div class="content">
+            <img src="resources/ni.png" alt="header pic" class="logo">
+            <center><p>Welcome to Codour - Your Gateway to HTML Mastery! Whether you're a complete beginner or looking to level up your web development skills, you've come to the right place. Our website is your go-to resource for learning the fundamentals of HTML. Get ready to dive into the world of web design and start creating stunning web pages from scratch. Let's embark on this exciting journey together!</p></center>
         </div>
     </center>
-    <div class="content">
-        <center><p>Welcome to Codour - Your Gateway to HTML Mastery! Whether you're a complete beginner or looking to level up your web development skills, you've come to the right place. Our website is your go-to resource for learning the fundamentals of HTML. Get ready to dive into the world of web design and start creating stunning web pages from scratch. Let's embark on this exciting journey together!</p></center>
+    <div >
+       
     </div>
     <center>
         <div class="selection">
-            <form>
-                <h4>What Codour Offers?</h4>
-                <img src="history.png" alt="history">
-                <p>Short description about features of codour</p>
-                <input type="button" class="viewButton" value="View" />
-            </form>
             <form action="history.html">
                 <h4>History of HTML</h4>
-                <img src="history.png" alt="history">
-                <p>Short description about history of html</p>
                 <input class="viewButton" type="submit" value="View">
             </form>
         </div>

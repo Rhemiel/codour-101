@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Other head elements (e.g., title, meta tags) -->
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Codour Exercises</title>
     <style>
         body {
             margin: 0;
             padding: 0;
         }
+
         .navOp {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: #333;
+        }
+
+            .navOp li {
+                float: left;
+                border-right: 1px solid #bbb;
             }
-        .navOp li {
-            float: left;
-            border-right: 1px solid #bbb;
-            }
-        .navOp li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            }
-        .navOp li a:hover {
-            background-color: #111;
-            }
+
+                .navOp li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    .navOp li a:hover {
+                        background-color: #111;
+                    }
+
         .active {
             background-color: #2B3499;
         }
@@ -47,27 +53,27 @@
             display: none;
         }
 
-        .sidebar h2 {
-            margin: 0;
-            padding: 10px;
-            color: #fff;
-        }
+            .sidebar h2 {
+                margin: 0;
+                padding: 10px;
+                color: #fff;
+            }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+            .sidebar ul {
+                list-style: none;
+                padding: 0;
+            }
 
-        .sidebar ul li {
-            margin: 5px 0;
-        }
+                .sidebar ul li {
+                    margin: 5px 0;
+                }
 
-        .sidebar a {
-            text-decoration: none;
-            color: #fff;
-        }
+            .sidebar a {
+                text-decoration: none;
+                color: #fff;
+            }
 
-        .closeSidePanel{
+        .closeSidePanel {
             color: #fff;
             position: absolute;
             top: 10px;
@@ -78,6 +84,7 @@
         h1, h2 {
             color: #333;
         }
+
         .sideButton li div {
             display: flex;
             justify-content: center;
@@ -89,12 +96,12 @@
             cursor: pointer;
         }
 
-        .selectionBar i{
+        .selectionBar i {
             padding: 20px;
             cursor: pointer;
         }
 
-        .exerciseButton{
+        .exerciseButton {
             border: 1px solid #bbb;
             background-color: #333;
             width: 90%;
@@ -106,20 +113,20 @@
             color: white;
         }
 
-        .mainExer{
+        .mainExer {
             display: none;
         }
 
-            .exerciseButton:hover {
-                background-color: #111;
-            }
+        .exerciseButton:hover {
+            background-color: #111;
+        }
 
         .optionButton:hover {
             background-color: #111;
         }
 
         /* Responsiveness */
-        @media (min-width: 344px) and (max-width: 804px){
+        @media (min-width: 344px) and (max-width: 804px) {
             .footer-content {
                 display: inline-flex;
                 justify-content: space-between;

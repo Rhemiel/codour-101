@@ -1,0 +1,5 @@
+﻿body {
+    background-image: url("resources/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* or 'contain' if you prefer */
+}
