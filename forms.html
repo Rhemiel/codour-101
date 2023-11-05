@@ -61,7 +61,7 @@
                             &lt;<input type="text" id="form1">&gt;
                             &lt;/form&gt;
                         </pre>
-                        <button class="submitButton" onclick="">Submit Answer</button>
+                        <button class="submitButton" id = "form1sub" onclick="verify1()">Submit Answer</button>
                     </div>
                 </div>
                 <div>
@@ -76,12 +76,43 @@
                                 &lt;<input type="text" id="form2.2"> value="css"&gt; CSS
                                 &lt;/form&gt;
                             </div>
-                            <button class="submitButton" onclick="">Submit Answer</button>
+                            <button class="submitButton"  id = "form2sub" onclick="verify2()">Submit Answer</button>
                         </pre>
                     </div>
                 </div>
             </section>
         </div>
         <script src="js/flow_control.js"></script>
+        <script>
+            var point = 0;
+            const form1 = document.getElementById("form1");
+            const form2_1 = document.getElementById("form2.1");
+            const form2_2 = document.getElementById("form2.2");
+            const formSub = document.getElementById("form1sub");
+            const formSub_ = document.getElementById("form2sub");
+
+            function verify1(){
+                if(form1.value == "input type=\"button\" value=\"OK\""){
+                    point+=1;
+                    alert("Current Point: " + point);
+                    form1.disabled = true;
+                    formSub.disabled = true;
+                }else{
+                    alert("Wrong Answer.");
+                }
+            }
+
+            function verify2(){
+                if(form2_1.value == "input type=\"radio\" name=\"fav_language\"" && form2_2.value == "input type=\"radio\" name=\"fav_language\""){
+                    point+=1;
+                    alert("Current Point: " + point);
+                    form2_1.disabled = true;
+                    form2_2.disabled = true;
+                    formSub_.disabled = true;
+                }else{
+                    alert("Wrong Answer.");
+                }
+            }
+        </script>
 </body>
 </html>
