@@ -2,4 +2,22 @@
     background-image: url("resources/bg.png");
     background-repeat: no-repeat;
     background-size: cover; /* or 'contain' if you prefer */
+    animation: slideIn 1s ease-in-out;
 }
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form {
+    transition: transform 0.3s ease;
+}
+

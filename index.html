@@ -18,6 +18,17 @@
                 transform: translateY(-10px);
             }
         }
+        @keyframes backgroundAnimation {
+            0% {
+                background-image: url('resources/logo.png');
+                /* Set the URL of the initial background image */
+            }
+
+            100% {
+                background-image: url('resources/timeline.png');
+                /* Set the URL of the final background image */
+            }
+        }
 
         body {
             margin: 0;
@@ -47,14 +58,15 @@
         .active {
             background-color: #2B3499;
         }
-        .content{
+        .content {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 6%;
         }
         .logo {
-            width: 400px;
-            height: 400px;
+            width: 35%;
+            height: 35%;
             animation: upAndDown 2s ease-in-out infinite
         }
         .selection{
@@ -71,9 +83,19 @@
             width: 31%;
             display: block;
             background: url("resources/logo.png");
-            background-size: cover;
+            background-position: center;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
         }
+
+            form:hover {
+                background: url("resources/timeline.png");
+                background-position: center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                animation: backgroundAnimation 1s linear;
+            }
+
         .viewButton {
             position: absolute;
             bottom: 0;
@@ -83,6 +105,10 @@
             width: 100px;
             border-radius: 100%;
             }
+
+        .viewButton:hover{
+            background-color: #999;
+        }
 
         .features{
             text-align:left;
@@ -172,6 +198,14 @@
             .selection{
                 display:block;
             }
+            .content {
+               padding: 17%;
+               display: block;
+            }
+            .logo{
+                width: 75%;
+                height: 75%;
+            }
 
             form {
                 border: 1px solid black;
@@ -179,13 +213,20 @@
                 margin: 5px;
                 padding: 5px;
                 height: 400px;
-                width: 95%;
+                width: 50%;
                 display: block;
+                margin: 25px;
             }
             .footer-content {
                 display: inline-flex;
                 justify-content: space-between;
                 align-items: center;
+            }
+        }
+        /* Responsiveness */
+        @media (min-width: 805px) and (max-width: 1100px) {
+            .content {
+                padding: 19%;
             }
         }
     </style>
