@@ -6,6 +6,7 @@ const cNav = document.getElementById("closeNav");
 const showExerciseButtons = document.querySelectorAll(".exerciseButton");
 const showExerciseOptions = document.querySelectorAll(".optionButton");
 const elementsToHide = document.querySelectorAll(".toggleSection");
+const ansField = document.querySelectorAll(".ansInput");
 
 function showNav(){
     sbNav.style.display = "block";
@@ -57,4 +58,9 @@ showExerciseButtons.forEach(button => {
 });
 showExerciseOptions.forEach(button => {
     button.addEventListener("click", showSelectedOption);
+});
+ansField.forEach(input => {
+    var absLength = parseInt(input.getAttribute('data-element'));
+    var maxLength = parseInt(input.getAttribute('maxlength'));
+    input.style.width = maxLength * absLength + 'px';
 });
