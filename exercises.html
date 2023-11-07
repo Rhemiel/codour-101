@@ -6,26 +6,45 @@
     <!-- Other head elements (e.g., title, meta tags) -->
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="styles/exercise_style.css" />
-    <title>Codour Exercises</title>
+    <title>Codour Exercise</title>
     <style>
-        .start{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            width: 100%; /* Set the width of the container */
-            height: 100vh; 
-        }
-        .container{
-            display: grid;
-            place-items: center;   
+        body {
+            margin: 0;
+            padding: 0;
         }
 
+        .navOp {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .navOp li {
+                float: left;
+                border-right: 1px solid #bbb;
+            }
+
+                .navOp li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    .navOp li a:hover {
+                        background-color: #111;
+                    }
+
+        .active {
+            background-color: #2B3499;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar-->
+     <!-- Navigation Bar-->
     <div class="navBar">
         <ul class="navOp">
             <li><a href="index.html">Home</a></li>
@@ -34,12 +53,6 @@
             <li><a href="examples.html">Examples</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-    </div>
-    <div class="start">
-        <form action="attribute.html" class="container">
-            <h3>Click the Button to begin</h3>
-            <input type="submit">
-        </form>
     </div>
 </body>
 </html>
