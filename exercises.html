@@ -142,6 +142,17 @@
             align-items: center;
         }
 
+        .correct {
+            border: 1px solid green;
+            color: rgb(161, 147, 147);
+            pointer-events: none;
+            }
+
+        .wrong {
+            border: 1px solid red;
+            color: rgb(161, 147, 147);
+            pointer-events: none;
+        }
         /* Responsiveness */
         @media (min-width: 344px) and (max-width: 804px) {
             .footer-content {
@@ -177,7 +188,7 @@
         <h2>Exercises</h2>
         <div class="scoreText">
             <p>Your current score is: &#160;</p>
-            <p class = "score"> 0</p><p>/110</p>
+            <p class = "score" id="scoreboard"> 0</p><p>/110</p>
         </div>
         <ul class="sideButton">
             <li><div class = "optionButton" id = "a" data-element = "fe">HTML Attributes</div></li>
@@ -214,14 +225,14 @@
                     <div class="exerciseButton" id="exer1" data-element="mainExer1">Exercise 1</div>
                     <div class="mainExer" id="mainExer1">
                         <div class = "question">
-                            <p>Add a "tooltip" to the paragraph below with the text "About W3Schools".</p>
-                            <p>&lt;p <input type="text" id="attr1" maxlength="5" class="ansInput" data-element="4"> ="About W3Schools"&gt;W3Schools is a web developer's site.&lt;/p&gt;</p>
-                            <button class = "verify" data-element="1">Submit Answer</button>
+                            <p>Add a "tooltip" to the paragraph below with the text "About Codour".</p>
+                            <p>&lt;p <input type="text" id="attr1" maxlength="5" class="ansInput" data-element="4" data-answer="title" data-group="1"> ="About Codour"&gt;Codour is a web developer's site.&lt;/p&gt;</p>
+                            <button class = "verify" id="1" onclick="checkAns(this.id)">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <h3>Answer: </h3>
-                            <p>Add a "tooltip" to the paragraph below with the text "About W3Schools".</p>
-                            <p>&lt;p <input type="text" maxlength="5" class="ansInput" value="title" data-element="4" readonly> ="About W3Schools"&gt;W3Schools is a web developer's site.&lt;/p&gt;</p>
+                            <p>Add a "tooltip" to the paragraph below with the text "About Codour".</p>
+                            <p>&lt;p <input type="text" maxlength="5" class="ansInput" value="title" data-element="4" readonly> ="About Codour"&gt;Codour is a web developer's site.&lt;/p&gt;</p>
                         </div>
                     </div>
                 </div>
@@ -230,13 +241,13 @@
                     <div class="mainExer" id="mainExer2">
                         <div class = "question">
                             <p>Set the size of the image to 250 pixels wide and 400 pixels tall.</p>
-                            <p>&lt;img src="w3schools.jpg" width="<input type="text" id = "attr2_1" maxlength="3" class="ansInput" data-element="7">" height="<input type="text"  id = "attr2_2" maxlength="3" class="ansInput" data-element="7">"&gt;</p>
+                            <p>&lt;img src="Codour.jpg" width="<input type="text" id = "attr2_1" maxlength="3" class="ansInput" data-element="7">" height="<input type="text"  id = "attr2_2" maxlength="3" class="ansInput" data-element="7">"&gt;</p>
                             <button class = "verify" data-element="2">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <h3>Answer: </h3>
                             <p>Set the size of the image to 250 pixels wide and 400 pixels tall.</p>
-                            <p>&lt;img src="w3schools.jpg" width="<input type="text" maxlength="3" class="ansInput" value="250" data-element="7" readonly>" height="<input type="text" maxlength="3" class="ansInput" value="400" data-element="7" readonly>"&gt;</p>
+                            <p>&lt;img src="Codour.jpg" width="<input type="text" maxlength="3" class="ansInput" value="250" data-element="7" readonly>" height="<input type="text" maxlength="3" class="ansInput" value="400" data-element="7" readonly>"&gt;</p>
                         </div>
                     </div>
                 </div>
@@ -244,14 +255,14 @@
                     <div class="exerciseButton" id="exer3" data-element="mainExer3">Exercise 3</div>
                     <div class="mainExer" id="mainExer3">
                         <div class = "question">
-                            <p>Make the element below into a link that goes to "https://www.w3schools.com".</p>
-                            <p>&lt;a <input type="text" id = "attr3" maxlength="5" class="ansInput" data-element="6"> "https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</p>
+                            <p>Make the element below into a link that goes to "https://www.Codour.com".</p>
+                            <p>&lt;a <input type="text" id = "attr3" maxlength="5" class="ansInput" data-element="6"> "https://www.Codour.com"&gt;This is a link&lt;/a&gt;</p>
                             <button class = "verify" data-element="3">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <h3>Answer: </h3>
-                            <p>Make the element below into a link that goes to "https://www.w3schools.com".</p>
-                            <p>&lt;a <input type="text" maxlength="5" class="ansInput" data-element="6" value="href=" readonly> "https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</p>
+                            <p>Make the element below into a link that goes to "https://www.Codour.com".</p>
+                            <p>&lt;a <input type="text" maxlength="5" class="ansInput" data-element="6" value="href=" readonly> "https://www.Codour.com"&gt;This is a link&lt;/a&gt;</p>
                         </div>
                     </div>
                 </div>
@@ -260,12 +271,12 @@
                     <div class="mainExer" id="mainExer4">
                         <div class = "question">
                             <p>Alternate text is useful when the image cannot be displayed, like when the page is read by a screen reader.</p>
-                            <p>&lt;img src="w3schools.png"  <input type="text" id = "attr4" maxlength="3" class="ansInput" data-element="7">="w3schools Logo"&gt;</p>
+                            <p>&lt;img src="Codour.png"  <input type="text" id = "attr4" maxlength="3" class="ansInput" data-element="7">="Codour Logo"&gt;</p>
                             <button class = "verify" data-element="4">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <p>Alternate text is useful when the image cannot be displayed, like when the page is read by a screen reader.</p>
-                            <p>&lt;img src="w3schools.png"  <input type="text" maxlength="3" class="ansInput" data-element="7" value="alt" readonly>="w3schools Logo"&gt;</p>
+                            <p>&lt;img src="Codour.png"  <input type="text" maxlength="3" class="ansInput" data-element="7" value="alt" readonly>="Codour Logo"&gt;</p>
                         </div>
                     </div>
                 </div>
@@ -357,23 +368,101 @@
                 <h4>HTML Paragraphs</h4>
                 <div>
                     <div class="exerciseButton" id="exer7" data-element="mainExer7">Exercise 1</div>
-                    <div class="mainExer" id="mainExer7">Test 1</div><!--8-->
+                    <div class="mainExer" id="mainExer7">
+                        <div class="question">
+                            <p>Use the correct HTML tag to add a paragraph with the text "Hello World!".</p>
+                            <p>&lt;html&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p><input type="text" id = "paragraph1" maxlength="19" class="ansInput" data-element="7"></p> 
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>
+                            <button class = "verify" data-element="8">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use the correct HTML tag to add a paragraph with the text "Hello World!".</p>
+                            <p>&lt;html&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p><input type="text" maxlength="19" class="ansInput" data-element="7" value="&lt;p&gt;Hello World!&lt;/p&gt;" readonly></p> 
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>    
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer8" data-element="mainExer8">Exercise 2</div>
-                    <div class="mainExer" id="mainExer8">Test </div><!--9-->
+                    <div class="mainExer" id="mainExer8"> 
+                        <div class = "question">
+                            <p>Clean up this document with proper end tags.</p>
+                            <p>&lt;h1&gt;This is a Heading<input type="text" id = "paragraph2_1" maxlength="5" class="ansInput" data-element="8"></p> 
+                            <p>&lt;p&gt;This is a paragraph.<input type="text" id = "paragraph2_2" maxlength="4" class="ansInput" data-element="8"></p> 
+                            <button class = "verify" data-element="9">Submit Answer</button>
+                        </div>
+                        <div class = "answer">
+                            <p>Clean up this document with proper end tags.</p>
+                            <p>&lt;h1&gt;This is a Heading<input type="text" maxlength="5" class="ansInput" data-element="8" value = "&lt;/h1&gt;"></p> 
+                            <p>&lt;p&gt;This is a paragraph.<input type="text" maxlength="4" class="ansInput" data-element="8" value = "&lt;/p&gt;"></p> 
+                        </div>
+                    </div><!--9-->
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer9" data-element="mainExer9">Exercise 3</div>
-                    <div class="mainExer" id="mainExer9">Test 3</div><!--10-->
+                    <div class="mainExer" id="mainExer9">
+                        <div class = "question">
+                            <p>Add a horizontal rule between the heading and the paragraph.</p>
+                            <p>&lt;h1&gt;This is a Heading&lt;/h1&gt;</p>
+                            <p><input type="text" id = "paragraph3" maxlength="4" class="ansInput" data-element="8"></p> 
+                            <p>
+                                &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                            </p> 
+                            <button class = "verify" data-element="10">Submit Answer</button>
+                        </div>
+                        <div class = "answer">
+                            <p>Add a horizontal rule between the heading and the paragraph.</p>
+                            <p>&lt;h1&gt;This is a Heading&lt;/ht&gt;</p>
+                            <p><input type="text" maxlength="4" class="ansInput" data-element="7" value="&lt;hr&gt;" readonly></p> 
+                            <p>
+                                &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                            </p> 
+                        </div>
+                    </div><!--10-->
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer10" data-element="mainExer10">Exercise 4</div>
-                    <div class="mainExer" id="mainExer10">Test 4</div><!--11-->
+                    <div class="mainExer" id="mainExer10">
+                        <div class = "question">
+                            <p>Add a line break in the middle of the paragraph:</p>
+                            <p>&lt;p&gt;My Bonnie<input type="text" id = "paragraph4" maxlength="4" class="ansInput" data-element="7">lies over the ocean.&lt;/p&gt;</p>
+                            <button class = "verify" data-element="11">Submit Answer</button>
+                        </div>
+                        <div class = "answer">
+                            <p>Add a line break in the middle of the paragraph:</p>
+                            <p>&lt;p&gt;My Bonnie<input type="text" maxlength="4" class="ansInput" data-element="7" value="&lt;br&gt;" readonly>lies over the ocean.&lt;/p&gt;</p>
+                        </div>
+                    </div><!--11-->
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer11" data-element="mainExer11">Exercise 5</div>
-                    <div class="mainExer" id="mainExer11">Test 5</div><!--12-->
+                    <div class="mainExer" id="mainExer11">
+                        <div class = "question">
+                            <p>Wrap this poem around HTML tags that will preserve all spaces and linebreaks when the element is displayed.</p>
+                            <p><input type="text" id = "paragraph5" maxlength="5" class="ansInput" data-element="8"></p>
+                            <p>My Bonnie lies over the ocean.</p>
+                            <p>My Bonnie lies over the sea.</p>
+                            <p>My Bonnie lies over the ocean.</p>
+                            <p>Oh, bring back my Bonnie to me.</p>
+                            <p><input type="text" id = "paragraph5" maxlength="6" class="ansInput" data-element="9"></p>
+                            <button class = "verify" data-element="11">Submit Answer</button>
+                        </div>
+                        <div class = "answer">
+                            <p>Wrap this poem around HTML tags that will preserve all spaces and linebreaks when the element is displayed.</p>
+                            <p><input type="text" maxlength="5" class="ansInput" data-element="7" value="&lt;pre&gt;" readonly></p>
+                            <p>My Bonnie lies over the ocean.</p>
+                            <p>My Bonnie lies over the sea.</p>
+                            <p>My Bonnie lies over the ocean.</p>
+                            <p>Oh, bring back my Bonnie to me.</p>
+                            <p><input type="text" id = "paragraph5" maxlength="6" class="ansInput" data-element="7" value="&lt;/pre&gt;" readonly></p>
+                        </div>
+                    </div><!--12-->
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="4e">
@@ -528,7 +617,7 @@
                             <p>&lt;p&gt;</p>
                             <p>H<input type="text" id = "formatting4" maxlength="5" class="ansInput" data-element="8">2<input type="text" id = "formatting4_1" maxlength="6" class="ansInput" data-element="7">O is the scientific term for water.</p>
                             <p>&lt;/p&gt;</p>
-                            <button class = "verify" data-element="21">Submit Answer</button>
+                            <button class = "verify" data-element="22">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <p>Apply subscript formatting to the number "2" in the text below.</p>
@@ -546,7 +635,7 @@
                             <p>&lt;p&gt;</p>
                             <p>My favorite color is <input type="text" id = "formatting5" maxlength="5" class="ansInput" data-element="7">blue<input type="text" id = "formatting5_1" maxlength="6" class="ansInput" data-element="6"> red.</p>
                             <p>&lt;/p&gt;</p>
-                            <button class = "verify" data-element="21">Submit Answer</button>
+                            <button class = "verify" data-element="23">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <p>Add a line through (strikeout) the letters "blue" in the text below.</p>
@@ -567,7 +656,7 @@
                             <p>&lt;p&gt;</p>
                             <p>I am so <input type="text" id = "quotation1" maxlength="3" class="ansInput" data-element="8">cool<input type="text" id = "quotation1_1" maxlength="4" class="ansInput" data-element="7">.</p>
                             <p>&lt;/p&gt;</p>
-                            <button class = "verify" data-element="21">Submit Answer</button>
+                            <button class = "verify" data-element="24">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <p>Use an HTML element to add quotation marks around the letters "cool".</p>
@@ -591,7 +680,7 @@
                             <p>countries and is supported by 1.2 million members in the United</p> 
                             <p>States and close to 5 million globally.</p>
                             <p><input type="text" id = "quotation2_2" maxlength="12" class="ansInput" data-element="8"></p>                
-                            <button class = "verify" data-element="21">Submit Answer</button>
+                            <button class = "verify" data-element="25">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <p>The text below should be a quoted section.
@@ -614,7 +703,7 @@
                             <p>Change text direction.</p>
                             <p>Make the text below go right-to-left.</p>
                             <p><input type="text" id = "quotation3_1" maxlength="15" class="ansInput" data-element="6">What a beautiful day!<input type="text" id = "quotation3_2" maxlength="5" class="ansInput" data-element="9"></p>               
-                            <button class = "verify" data-element="21">Submit Answer</button>
+                            <button class = "verify" data-element="26">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <p>Change text direction.</p>
@@ -630,7 +719,7 @@
                             <p>The letters "WHO" in the text below is an abbreviation of "World Health Organization".</p>
                             <p>Use an HTML element to provide the specified abbreviation of "WHO".</p>
                             <p>The &lt;<input type="text" id = "quotation4" maxlength="4" class="ansInput" data-element="7"> <input type="text" id = "quotation4_1" maxlength="6" class="ansInput" data-element="5">"World Health Organization"&gt; WHO&lt;/<input type="text" id = "quotation4_2" maxlength="4" class="ansInput" data-element="7">&gt; was founded in 1948.</p>               
-                            <button class = "verify" data-element="21">Submit Answer</button>
+                            <button class = "verify" data-element="27">Submit Answer</button>
                         </div>
                         <div class = "answer">
                             <p>The letters "WHO" in the text below is an abbreviation of "World Health Organization".</p>
@@ -644,134 +733,669 @@
                 <h4>HTML Comments</h4>
                 <div>
                     <div class="exerciseButton" id="exer28" data-element="mainExer28">Exercise 1</div>
-                    <div class="mainExer" id="mainExer28">Test 1</div>
+                    <div class="mainExer" id="mainExer28">
+                        <div class="question">
+                            <p>Use the HTML comment tag to make a comment out of the "This is a comment" text.</p>
+                            <p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
+                            <p><input type="text" id = "comment1_1" maxlength="4" class="ansInput" data-element="6">This is a comment<input type="text" id = "comment1_2" maxlength="3" class="ansInput" data-element="6"></p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                            <button class = "verify" data-element="28">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use the HTML comment tag to make a comment out of the "This is a comment" text.</p>
+                            <p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
+                            <p><input type="text" maxlength="4" class="ansInput" data-element="6" value="&lt;!--" readonly>This is a comment<input type="text" maxlength="3" class="ansInput" data-element="6" value="--&gt;" readonly></p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer29" data-element="mainExer29">Exercise 2</div>
-                    <div class="mainExer" id="mainExer29">Test 2</div>
+                    <div class="mainExer" id="mainExer29">
+                        <div class="question">
+                            <p>Add comment tags around the paragraph:</p>
+                            <p><input type="text" id = "comment2_1" maxlength="4" class="ansInput" data-element="6">&lt;p&gt;This is a paragraph.&lt;/p&gt;<input type="text" id = "comment2_2" maxlength="3" class="ansInput" data-element="6"></p>
+                            <button class = "verify" data-element="29">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Add comment tags around the paragraph:</p>
+                            <p><input type="text" maxlength="4" class="ansInput" data-element="6" value="&lt;!--" readonly>&lt;p&gt;This is a paragraph.&lt;/p&gt;<input type="text" maxlength="3" class="ansInput" data-element="6" value="--&gt;" readonly></p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="8e">
                 <h4>HTML CSS</h4>
                 <div>
                     <div class="exerciseButton" id="exer30" data-element="mainExer30">Exercise 1</div>
-                    <div class="mainExer" id="mainExer30">Test 1</div>
+                    <div class="mainExer" id="mainExer30">
+                        <div class="question">
+                            <p>Use CSS to set the background color of the document (body) to yellow.</p>
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;head&gt;</p>
+                            <p>&lt;style&gt;</p>
+                            <p><input type="text" id = "css1_2" maxlength="4" class="ansInput" data-element="7"> <input type="text" id = "css1_2" maxlength="1" class="ansInput" data-element="9"></p>
+                            <p><input type="text" id = "css1_3" maxlength="16" class="ansInput" data-element="7">: yellow;</p>
+                            <p><input type="text" id = "css1_4" maxlength="1" class="ansInput" data-element="9"></p>
+                            <p>&lt;/style&gt;</p>
+                            <p>&lt;/head&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p>&lt;h1&gt;My Home Page&lt;/h1&gt;</p>
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>
+                            <button class = "verify" data-element="30">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use CSS to set the background color of the document (body) to yellow.</p>
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;head&gt;</p>
+                            <p>&lt;style&gt;</p>
+                            <p><input type="text" maxlength="4" class="ansInput" data-element="7" value="body" readonly> <input type="text" maxlength="1" class="ansInput" data-element="9" value="{" readonly></p>
+                            <p><input type="text" maxlength="16" class="ansInput" data-element="7" value="background-color" readonly>: yellow;</p>
+                            <p><input type="text" maxlength="1" class="ansInput" data-element="9" value="}" readonly></p>
+                            <p>&lt;/style&gt;</p>
+                            <p>&lt;/head&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p>&lt;h1&gt;My Home Page&lt;/h1&gt;</p>
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer31" data-element="mainExer31">Exercise 2</div>
-                    <div class="mainExer" id="mainExer31">Test 2</div>
+                    <div class="mainExer" id="mainExer31">
+                        <div class="question">
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;html&gt;</p>
+                            <p>&lt;head&gt;</p>
+                            <p>&lt;style&gt;</p>
+                            <p>body {<input type="text" id = "css2" maxlength="11" class="ansInput" data-element="6">:courier;}</p>
+                            <p>&lt;style&gt;</p>
+                            <p>&lt;/head&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p>&lt;h1&gt;My Home Page&lt;/h1&gt;</p>
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>
+                            <button class = "verify" data-element="31">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;html&gt;</p>
+                            <p>&lt;head&gt;</p>
+                            <p>&lt;style&gt;</p>
+                            <p>body {<input type="text" maxlength="11" class="ansInput" data-element="6" value="font-family" readonly>:courier;}</p>
+                            <p>&lt;style&gt;</p>
+                            <p>&lt;/head&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p>&lt;h1&gt;My Home Page&lt;/h1&gt;</p>
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer32" data-element="mainExer32">Exercise 3</div>
-                    <div class="mainExer" id="mainExer32">Test 3</div>
+                    <div class="mainExer" id="mainExer32">
+                        <div class="question">
+                            <p>Use CSS to set the text color of the document to red.</p>
+                            <div class="question">
+                                <p>&lt;!DOCTYPE html&gt;</p>
+                                <p>&lt;html&gt;</p>
+                                <p>&lt;head&gt;</p>
+                                <p>&lt;style&gt;</p>
+                                <p>body {<input type="text" id = "css3" maxlength="5" class="ansInput" data-element="6">:red;}</p>
+                                <p>&lt;style&gt;</p>
+                                <p>&lt;/head&gt;</p>
+                                <p>&lt;body&gt;</p>
+                                <p>&lt;h1&gt;My Home Page&lt;/h1&gt;</p>
+                                <p>&lt;/body&gt;</p>
+                                <p>&lt;/html&gt;</p>
+                                <button class = "verify" data-element="32">Submit Answer</button>
+                            </div>
+                            <div class="answer">
+                                <p>&lt;!DOCTYPE html&gt;</p>
+                                <p>&lt;html&gt;</p>
+                                <p>&lt;head&gt;</p>
+                                <p>&lt;style&gt;</p>
+                                <p>body {<input type="text" maxlength="5" class="ansInput" data-element="6" value="color" readonly>:courier;}</p>
+                                <p>&lt;style&gt;</p>
+                                <p>&lt;/head&gt;</p>
+                                <p>&lt;body&gt;</p>
+                                <p>&lt;h1&gt;My Home Page&lt;/h1&gt;</p>
+                                <p>&lt;/body&gt;</p>
+                                <p>&lt;/html&gt;</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer33" data-element="mainExer33">Exercise 4</div>
-                    <div class="mainExer" id="mainExer33">Test 4</div>
+                    <div class="mainExer" id="mainExer33">
+                        <div class="question">
+                            <p>Use CSS to make a yellow, 1 pixel thick, border around all paragraphs.</p>
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;html&gt;</p>
+                            <p>&lt;head&gt;</p>
+                            <p>&lt;style&gt;</p>
+                            <p><input type="text" id = "css4_1" maxlength="1" class="ansInput" data-element="9">{<input type="text" id = "css4_2" maxlength="6" class="ansInput" data-element="7">: <input type="text" id = "css4_3" maxlength="3" class="ansInput" data-element="9"> solid <input type="text" id = "css4_4" maxlength="6" class="ansInput" data-element="7">;}</p>
+                            <p>&lt;/style&gt;</p>
+                            <p>&lt;/head&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>
+                            <button class = "verify" data-element="33">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use CSS to make a yellow, 1 pixel thick, border around all paragraphs.</p>
+                            <p>&lt;!DOCTYPE html&gt;</p>
+                            <p>&lt;html&gt;</p>
+                            <p>&lt;head&gt;</p>
+                            <p>&lt;style&gt;</p>
+                            <p><input type="text" maxlength="1" class="ansInput" data-element="9" value="p" readonly>{<input type="text" maxlength="6" class="ansInput" data-element="7" value="border" readonly>: <input type="text" maxlength="3" class="ansInput" data-element="9" value="1px" readonly> solid <input type="text" maxlength="6" class="ansInput" data-element="7" value="yellow" readonly>;}</p>
+                            <p>&lt;/style&gt;</p>
+                            <p>&lt;/head&gt;</p>
+                            <p>&lt;body&gt;</p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+                            <p>&lt;/body&gt;</p>
+                            <p>&lt;/html&gt;</p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="9e">
                 <h4>HTML Links</h4>
                 <div>
                     <div class="exerciseButton" id="exer34" data-element="mainExer34">Exercise 1</div>
-                    <div class="mainExer" id="mainExer34">Test 1</div>
+                    <div class="mainExer" id="mainExer34">
+                        <div class="question">
+                            <p>Use the correct HTML to make the text below into a link to "default.html".</p>
+                            <p><input type="text" id = "links1_1" maxlength="2" class="ansInput" data-element="9"> <input type="text" id = "links1_2" maxlength="17" class="ansInput" data-element="6">>&gt;Visit our HTML tutorial.<input type="text" id = "links3" maxlength="4" class="ansInput" data-element="8"></p>
+                            <button class = "verify" data-element="34">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use the correct HTML to make the text below into a link to "default.html".</p>
+                            <p><input type="text" maxlength="2" class="ansInput" data-element="9" value="&lt;a" readonly> <input type="text" maxlength="17" class="ansInput" data-element="6" value="href=default.html">>&gt;Visit our HTML tutorial.<input type="text" maxlength="4" class="ansInput" data-element="8" value="&lt;/a&gt;"></p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer35" data-element="mainExer35">Exercise 2</div>
-                    <div class="mainExer" id="mainExer35">Test 2</div>
+                    <div class="mainExer" id="mainExer35">
+                        <div class="question">
+                            <p>Use CSS to remove the underline from the link.</p>
+                            <p>&lt;a href="html_images.asp" style="<input type="text" id = "links2" maxlength="21" class="ansInput" data-element="6">"&gt;HTML Images&lt;/a&gt;</p>
+                            <button class = "verify" data-element="35">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use CSS to remove the underline from the link.</p>
+                            <p>&lt;a href="html_images.asp" style="<input type="text" maxlength="21" class="ansInput" data-element="6" value="text-decoration:none;" readonly>"&gt;HTML Images&lt;/a&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer36" data-element="mainExer36">Exercise 3</div>
-                    <div class="mainExer" id="mainExer36">Test 3</div>
+                    <div class="mainExer" id="mainExer36">
+                        <div class="question">
+                            <p>Use the correct HTML attribute to make the link open in a new window.</p>
+                            <p>&lt;a href="html_images.asp" <input type="text" id = "links3" maxlength="15" class="ansInput" data-element="6">&gt;HTML Images&lt;/a&gt;</p>
+                            <button class = "verify" data-element="36">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use the correct HTML attribute to make the link open in a new window.</p>
+                            <p>&lt;a href="html_images.asp" <input type="text" maxlength="15" class="ansInput" data-element="6" value="target=&quot;_blank&quot;">&gt;HTML Images&lt;/a&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer37" data-element="mainExer37">Exercise 4</div>
-                    <div class="mainExer" id="mainExer37">Test 4</div>
+                    <div class="mainExer" id="mainExer37">
+                        <div class="question">
+                            <p>Use the correct HTML to make the image become a link to "default.html".</p>
+                            <p><input type="text" id = "links4_1" maxlength="2" class="ansInput" data-element="9"> <input type="text" id = "links4_2" maxlength="20" class="ansInput" data-element="6"></p>
+                            <p>&lt;img src="smiley.gif"&gt;</p>
+                            <p><input type="text" id = "links4_3" maxlength="4" class="ansInput" data-element="7"></p>
+                            <button class = "verify" data-element="37">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use the correct HTML to make the image become a link to "default.html".</p>
+                            <p><input type="text" maxlength="2" class="ansInput" data-element="9" value="&lt;a" readonly> <input type="text" maxlength="20" class="ansInput" data-element="6" value="href=&quot;default.html&quot;&gt;" readonly></p>
+                            <p>&lt;img src="smiley.gif"&gt;</p>
+                            <p><input type="text" maxlength="4" class="ansInput" data-element="7" value="&lt;/a&gt;"></p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer38" data-element="mainExer38">Exercise 5</div>
-                    <div class="mainExer" id="mainExer38">Test 5</div>
+                    <div class="mainExer" id="mainExer38">
+                        <div class="question">
+                            <p>Add a "tooltip" to the link.</p>
+                            <p>The "tooltip" should say "Home".</p>
+                            <p>&lt;a href="default.html" <input type="text" id = "links5" maxlength="12" class="ansInput" data-element="7">&gt;Back to Home&lt;/a&gt;</p>
+                            <button class = "verify" data-element="38">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Add a "tooltip" to the link.</p>
+                            <p>The "tooltip" should say "Home".</p>
+                            <p>&lt;a href="default.html" <input type="text" maxlength="12" class="ansInput" data-element="7" value="title=&quot;Home&quot;" readonly>&gt;Back to Home&lt;/a&gt;</p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="10e">
                 <h4>HTML Images</h4>
                 <div>
                     <div class="exerciseButton" id="exer39" data-element="mainExer39">Exercise 1</div>
-                    <div class="mainExer" id="mainExer39">Test 1</div>
+                    <div class="mainExer" id="mainExer39">
+                        <div class="question">
+                            <p>Use the HTML image attributes to set the size of the image to 250 pixels wide and 400 pixels tall.</p>
+                            <p>&lt;img src="scream.png" <input type="text" id = "images1_1" maxlength="5" class="ansInput" data-element="8">="250" <input type="text" id = "images1_2" maxlength="6" class="ansInput" data-element="8">="400"&gt;</p>
+                            <button class = "verify" data-element="39">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use the HTML image attributes to set the size of the image to 250 pixels wide and 400 pixels tall.</p>
+                            <p>&lt;img src="scream.png" <input type="text" maxlength="5" class="ansInput" data-element="8" value="width" readonly>="250" <input type="text" maxlength="6" class="ansInput" data-element="8" value="height" readonly>="400"&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer40" data-element="mainExer40">Exercise 2</div>
-                    <div class="mainExer" id="mainExer40">Test 2</div>
+                    <div class="mainExer" id="mainExer40">
+                        <div class="question">
+                            <p>Use the HTML image attributes to set the size of the image to 250 pixels wide and 400 pixels tall.</p>
+                            <p>&lt;img src="scream.png" style="<input type="text" id = "images2" maxlength="24" class="ansInput" data-element="8">;"&gt;</p>
+                            <button class = "verify" data-element="40">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use CSS to set the size of the image to 250 pixels wide and 400 pixels tall.</p>
+                            <p>&lt;img src="scream.png" style="<input type="text" maxlength="24" class="ansInput" data-element="8" value="width:250px;height:400px" readonly>;"&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer41" data-element="mainExer41">Exercise 3</div>
-                    <div class="mainExer" id="mainExer41">Test 3</div>
+                    <div class="mainExer" id="mainExer41">
+                        <div class="question">
+                            <p>Use the correct HTML to make the image become a link to "default.html".</p>
+                            <p><input type="text" id = "images3_1" maxlength="2" class="ansInput" data-element="8"> <input type="text" id = "images3_2" maxlength="19" class="ansInput" data-element="8">&gt;</p>
+                            <p>&lt;img src="smiley.gif"&gt;</p>
+                            <p><input type="text" id = "images3_3" maxlength="4" class="ansInput" data-element="8"></p>
+                            <button class = "verify" data-element="41">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Use the correct HTML to make the image become a link to "default.html".</p>
+                            <p><input type="text" maxlength="2" class="ansInput" data-element="8" value="&lt;a" readonly> <input type="text" maxlength="19" class="ansInput" data-element="8" value="href=&quot;default.html&quot;" readonly>&gt;</p>
+                            <p>&lt;img src="smiley.gif"&gt;</p>
+                            <p><input type="text" maxlength="4" class="ansInput" data-element="8" value="&lt;/a&gt;" readonly></p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer42" data-element="mainExer42">Exercise 4</div>
-                    <div class="mainExer" id="mainExer42">Test 4</div>
+                    <div class="mainExer" id="mainExer42">
+                        <div class="question">
+                            <p>Make the image below float to the right of the paragraph.</p>
+                            <p>&lt;p&gt;</p>
+                            <p>&lt;img src="smiley.gif" style="<input type="text" id = "images4" maxlength="11" class="ansInput" data-element="8">;"&gt;</p>
+                            <p>This is a paragraph.</p>
+                            <p>This paragraph contains an image</p>
+                            <p>&lt;/p&gt;</p>
+                            <button class = "verify" data-element="42">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Make the image below float to the right of the paragraph.</p>
+                            <p>&lt;p&gt;</p>
+                            <p>&lt;img src="smiley.gif" style="<input type="text" maxlength="11" class="ansInput" data-element="8" value="float:right" readonly>;"&gt;</p>
+                            <p>This is a paragraph.</p>
+                            <p>This paragraph contains an image</p>
+                            <p>&lt;/p&gt;</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer43" data-element="mainExer43">Exercise 5</div>
-                    <div class="mainExer" id="mainExer43">Test 5</div>
-                </div>
-                <div>
-                    <div class="exerciseButton" id="exer44" data-element="mainExer44">Exercise 6</div>
-                    <div class="mainExer" id="mainExer44">Test 6</div>
+                    <div class="mainExer" id="mainExer43">
+                        <div class="question">
+                            <p>Add the correct HTML attribute to display the "smiley.gif" image.</p>
+                            <p>&lt;img <input type="text" id = "images5" maxlength="16" class="ansInput" data-element="8">&gt;</p>
+                            <button class = "verify" data-element="43">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>Add the correct HTML attribute to display the "smiley.gif" image.</p>
+                            <p>&lt;img <input type="text" maxlength="16" class="ansInput" data-element="8" value="src=&quot;smiley.gif&quot;" readonly>&gt;</p>
+                        </div> 
+                    </div> 
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="11e">
                 <h4>HTML Tables</h4>
                 <div>
                     <div class="exerciseButton" id="exer45" data-element="mainExer45">Exercise 1</div>
-                    <div class="mainExer" id="mainExer45">Test 1</div>
+                    <div class="mainExer" id="mainExer45">
+                        <div class="question">
+                            <p>
+                                Add a table row with two table headers.<br>
+                                The two table headers should have the value "Name" and "Age".<br>
+                                &lt;table&gt;<br>
+                                <input type="text" id = "table1_1" maxlength="4" class="ansInput" data-element="8"><br>
+                                <input type="text" id = "table1_2" maxlength="13" class="ansInput" data-element="8"><br>
+                                <input type="text" id = "table1_3" maxlength="12" class="ansInput" data-element="8"><br>
+                                <input type="text" id = "table1_4" maxlength="5" class="ansInput" data-element="8"><br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;Jill Smith&lt;/td&gt;<br>
+                                &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                                <button class = "verify" data-element="45">Submit Answer</button>
+                            </p>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Add a table row with two table headers.<br>
+                                The two table headers should have the value "Name" and "Age".<br>
+                                &lt;table&gt;<br>
+                                <input type="text" maxlength="4" class="ansInput" data-element="8" value="&lt;tr&gt;" readonly><br>
+                                <input type="text" maxlength="13" class="ansInput" data-element="8" value="&lt;th&gt;Name&lt;/th&gt;" readonly><br>
+                                <input type="text" maxlength="12" class="ansInput" data-element="8" value="&lt;th&gt;Age&lt;/th&gt;" readonly><br>
+                                <input type="text" maxlength="5" class="ansInput" data-element="8" value="&lt;/tr&gt;" readonly><br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;Jill Smith&lt;/td&gt;<br>
+                                &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer46" data-element="mainExer46">Exercise 2</div>
-                    <div class="mainExer" id="mainExer46">Test 2</div>
+                    <div class="mainExer" id="mainExer46">
+                        <div class="question">
+                            <p>
+                                Add a table caption that says "Names".<br>
+                                &lt;table&gt;<br>
+                                <input type="text" id = "table2" maxlength="24" class="ansInput" data-element="8"><br>
+                                &lt;tr&gt;<br>
+                                &lt;th&gt;First Name&lt;/th&gt;<br>
+                                &lt;th&gt;Last Name&lt;/th&gt;<br>
+                                &lt;th&gt;Points&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;Jill&lt;/td&gt;<br>
+                                &lt;td&gt;Smith&lt;/td&gt;<br>
+                                &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                            </p>
+                            <button class = "verify" data-element="46">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Add a table caption that says "Names".<br>
+                                &lt;table&gt;<br>
+                                <input type="text" maxlength="24" class="ansInput" data-element="8" value="&lt;caption&gt;Names&lt;/caption&gt;" readonly><br>
+                                &lt;tr&gt;<br>
+                                &lt;th&gt;First Name&lt;/th&gt;<br>
+                                &lt;th&gt;Last Name&lt;/th&gt;<br>
+                                &lt;th&gt;Points&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;Jill&lt;/td&gt;<br>
+                                &lt;td&gt;Smith&lt;/td&gt;<br>
+                                &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer47" data-element="mainExer47">Exercise 3</div>
-                    <div class="mainExer" id="mainExer47">Test 3</div>
+                    <div class="mainExer" id="mainExer47">
+                        <div class="question">
+                            <p>
+                                Use CSS styles to make the table 300 pixels wide.<br>
+                                &lt;table <input type="text" id = "table3" maxlength="20" class="ansInput" data-element="8">&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;th&gt;First Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Last Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Points&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Jill&lt;/td&gt;<br>
+                                    &lt;td&gt;Smith&lt;/td&gt;<br>
+                                    &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                            </p>
+                            <button class = "verify" data-element="47">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Use CSS styles to make the table 300 pixels wide.<br>
+                                &lt;table <input type="text" maxlength="20" class="ansInput" data-element="8" value="style=&quot;width:300px;&quot;" readonly>&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;th&gt;First Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Last Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Points&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Jill&lt;/td&gt;<br>
+                                    &lt;td&gt;Smith&lt;/td&gt;<br>
+                                    &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer48" data-element="mainExer48">Exercise 4</div>
-                    <div class="mainExer" id="mainExer48">Test 4</div>
+                    <div class="mainExer" id="mainExer48">
+                        <div class="question">
+                            <p>
+                                Add a table row at the end of the table, with two table cells.<br>
+                                The two table cells should have the value "Eve Jackson" and "94".<br>
+                                &lt;table&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;th&gt;Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Age&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Jill Smith&lt;/td&gt;<br>
+                                    &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                <input type="text" id = "table4_1" maxlength="4" class="ansInput" data-element="8"><br>
+                                <input type="text" id = "table4_2" maxlength="20" class="ansInput" data-element="8"><br>
+                                <input type="text" id = "table4_3" maxlength="11" class="ansInput" data-element="8"><br>
+                                <input type="text" id = "table4_4" maxlength="5" class="ansInput" data-element="8"><br>
+                                &lt;/table&gt;<br>
+                            </p>
+                            <button class = "verify" data-element="48">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Add a table row at the end of the table, with two table cells.<br>
+                                The two table cells should have the value "Eve Jackson" and "94".<br>
+                                &lt;table&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;th&gt;Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Age&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Jill Smith&lt;/td&gt;<br>
+                                    &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                <input type="text" maxlength="4" class="ansInput" data-element="8" value="&lt;tr&gt;" readonly><br>
+                                <input type="text" maxlength="20" class="ansInput" data-element="8" value="&lt;td&gt;Eve Jackson&lt;/td&gt;" readonly><br>
+                                <input type="text" maxlength="11" class="ansInput" data-element="8" value="&lt;td&gt;94&lt;/td&gt;" readonly><br>
+                                <input type="text" maxlength="5" class="ansInput" data-element="8" value="&lt;/tr&gt;" readonly><br>
+                                &lt;/table&gt;<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer49" data-element="mainExer49">Exercise 5</div>
-                    <div class="mainExer" id="mainExer49">Test 5</div>
-                </div>
-                <div>
-                    <div class="exerciseButton" id="exer50" data-element="mainExer50">Exercise 6</div>
-                    <div class="mainExer" id="mainExer50">Test 6</div>
+                    <div class="mainExer" id="mainExer49">
+                        <div class="question">
+                            <p>
+                                Use the correct HTML attribute to make the first TH element span two columns.<br>
+                                &lt;table&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;th <input type="text" id="table5" maxlength="11" class="ansInput" data-element="8">&gt;Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Age&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Jill&lt;/td&gt;<br>
+                                    &lt;td&gt;Smith&lt;/td&gt;<br>
+                                    &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Eve&lt;/td&gt;<br>
+                                    &lt;td&gt;Jackson&lt;/td&gt;<br>
+                                    &lt;td&gt;94&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                            </p>
+                            <button class = "verify" data-element="49">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Use the correct HTML attribute to make the first TH element span two columns.<br>
+                                &lt;table&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;th <input type="text" maxlength="11" class="ansInput" data-element="8" value="colspan=&quot;2&quot;">&gt;Name&lt;/th&gt;<br>
+                                    &lt;th&gt;Age&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Jill&lt;/td&gt;<br>
+                                    &lt;td&gt;Smith&lt;/td&gt;<br>
+                                    &lt;td&gt;50&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                    &lt;td&gt;Eve&lt;/td&gt;<br>
+                                    &lt;td&gt;Jackson&lt;/td&gt;<br>
+                                    &lt;td&gt;94&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;/table&gt;<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="12e">
                 <h4>HTML Lists</h4>
                 <div>
                     <div class="exerciseButton" id="exer51" data-element="mainExer51">Exercise 1</div>
-                    <div class="mainExer" id="mainExer51">Test 1</div>
+                    <div class="mainExer" id="mainExer51">
+                        <div class="question">
+                            <p>
+                                Add a list item with the text "Coffee" inside the &lt;ul&gt;.<br>
+                                &lt;ul&gt;<br>
+                                <input type="text" id = "lists1_1" maxlength="4" class="ansInput" data-element="8">Coffee<input type="text" id = "lists1_2" maxlength="5" class="ansInput" data-element="8"><br>
+                                &lt;/ul&gt;<br>
+                            </p>
+                            <button class = "verify" data-element="50">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                &lt;ul&gt;<br>
+                                <input type="text" maxlength="4" class="ansInput" data-element="8" value="&lt;li&gt;" readonly>Coffee<input type="text" maxlength="5" class="ansInput" data-element="8" value="&lt;/li&gt;" readonly><br>
+                                &lt;/ul&gt;<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer52" data-element="mainExer52">Exercise 2</div>
-                    <div class="mainExer" id="mainExer52">Test 2</div>
+                    <div class="mainExer" id="mainExer52">
+                        <div class="question">
+                            <p>
+                                Finish the HTML code to make an ordered list.<br>
+                                <input type="text" id = "lists2_1" maxlength="4" class="ansInput" data-element="8"><br>
+                                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                                &lt;li&gt;Tea&lt;/li&gt;<br>
+                                &lt;li&gt;Milk&lt;/li&gt;<br>
+                                <input type="text" id = "lists2_2" maxlength="5" class="ansInput" data-element="8"> <br>                         
+                            </p>
+                            <button class = "verify" data-element="51">Submit Answer</button>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Finish the HTML code to make an ordered list.<br>
+                                <input type="text" maxlength="4" class="ansInput" data-element="8" value="&lt;ol&gt;"><br>
+                                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                                &lt;li&gt;Tea&lt;/li&gt;<br>
+                                &lt;li&gt;Milk&lt;/li&gt;<br>
+                                <input type="text" maxlength="5" class="ansInput" data-element="8" value="&lt;/ol&gt;"> <br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer53" data-element="mainExer53">Exercise 3</div>
-                    <div class="mainExer" id="mainExer53">Test 3</div>
+                    <div class="mainExer" id="mainExer53">
+                        <p>
+                            <div class="question">
+                                <p>
+                                    Finish the HTML code to make an unordered list.<br>
+                                    <input type="text" id = "lists3_1" maxlength="4" class="ansInput" data-element="8"><br>
+                                    &lt;li&gt;Cat&lt;/li&gt;<br>
+                                    &lt;li&gt;Dog&lt;/li&gt;<br>
+                                    &lt;li&gt;Parrot&lt;/li&gt;<br>
+                                    <input type="text" id = "lists3_2" maxlength="5" class="ansInput" data-element="8"> <br>                         
+                                </p>
+                                <button class = "verify" data-element="52">Submit Answer</button>
+                            </div>
+                            <div class="answer">
+                                <p>
+                                    Finish the HTML code to make an unordered list.<br>
+                                    <input type="text" maxlength="4" class="ansInput" data-element="8" value="&lt;ul&gt;"><br>
+                                    &lt;li&gt;Cat&lt;/li&gt;<br>
+                                    &lt;li&gt;Dog&lt;/li&gt;<br>
+                                    &lt;li&gt;Parrot&lt;/li&gt;<br>
+                                    <input type="text" maxlength="5" class="ansInput" data-element="8" value="&lt;/ul&gt;"> <br>
+                                </p>
+                            </div>
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer54" data-element="mainExer54">Exercise 4</div>
-                    <div class="mainExer" id="mainExer54">Test 4</div>
+                    <div class="mainExer" id="mainExer54">
+                        <div class="question">
+                            <p>
+                                Use the correct HTML attribute to display letters (uppercase ABC) instead of numbers.<br>
+                                &lt;ol <input type="text" id = "lists4_1" maxlength="8" class="ansInput" data-element="8" value="&lt;/ul&gt;">&gt;<br>
+                                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                                &lt;li&gt;Tea&lt;/li&gt;<br>
+                                &lt;li&gt;Milk&lt;/li&gt;<br>
+                                &lt;/ol&gt;<br>  
+                            </p>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Use the correct HTML attribute to display letters (uppercase ABC) instead of numbers.<br>
+                                &lt;ol <input type="text" maxlength="8" class="ansInput" data-element="8" value="&lt;/ul&gt;">&gt;<br>
+                                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                                &lt;li&gt;Tea&lt;/li&gt;<br>
+                                &lt;li&gt;Milk&lt;/li&gt;<br>
+                                &lt;/ol&gt;<br>  
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer55" data-element="mainExer55">Exercise 5</div>
                     <div class="mainExer" id="mainExer55">Test 5</div>
-                </div>
-                <div>
-                    <div class="exerciseButton" id="exer56" data-element="mainExer56">Exercise 6</div>
-                    <div class="mainExer" id="mainExer56">Test 6</div>
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="13e">
