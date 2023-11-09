@@ -1,5 +1,9 @@
 ﻿body {
     animation: slideIn 1s ease-in-out;
+    background-image: url("../resources/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:coral;
 }
 
 @keyframes slideIn {
