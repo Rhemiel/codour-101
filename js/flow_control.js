@@ -41,6 +41,7 @@ const showExerciseButtons = document.querySelectorAll(".exerciseButton");
 const showExerciseOptions = document.querySelectorAll(".optionButton");
 const elementsToHide = document.querySelectorAll(".toggleSection");
 const ansField = document.querySelectorAll(".ansInput");
+var score = 0;
 
 function showNav(){
     sbNav.style.display = "block";
@@ -140,10 +141,14 @@ function wrongAns(dataGroup) {
     });
 }
 
+function showHidden(id){
+    hiddenAns = document.getElementById("answer" + id);
+    hiddenAns.style.display = "block";
+}
+
 
 function checkAns(id){
     const scoreboard = document.getElementById("scoreboard");
-    var score = 0;
     const DataAnswers = getDataAnswersByGroup(id);
     const playerAnswer = getInputValuesByDataGroup(id);
     if(arraysAreEqual(DataAnswers, playerAnswer)){
@@ -153,6 +158,7 @@ function checkAns(id){
     }else{
         wrongAns(id);
     }
+    showHidden(id);
 }
 
 

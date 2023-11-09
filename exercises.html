@@ -132,6 +132,7 @@
         }
 
         .answer{
+            display: none;
             border: 1px solid #000000;
             width: 90%;
         }
@@ -229,7 +230,7 @@
                             <p>&lt;p <input type="text" id="attr1" maxlength="5" class="ansInput" data-element="4" data-answer="title" data-group="1"> ="About Codour"&gt;Codour is a web developer's site.&lt;/p&gt;</p>
                             <button class = "verify" id="1" onclick="checkAns(this.id)">Submit Answer</button>
                         </div>
-                        <div class = "answer">
+                        <div class = "answer" id = "answer1">
                             <h3>Answer: </h3>
                             <p>Add a "tooltip" to the paragraph below with the text "About Codour".</p>
                             <p>&lt;p <input type="text" maxlength="5" class="ansInput" value="title" data-element="4" readonly> ="About Codour"&gt;Codour is a web developer's site.&lt;/p&gt;</p>
@@ -241,10 +242,10 @@
                     <div class="mainExer" id="mainExer2">
                         <div class = "question">
                             <p>Set the size of the image to 250 pixels wide and 400 pixels tall.</p>
-                            <p>&lt;img src="Codour.jpg" width="<input type="text" id = "attr2_1" maxlength="3" class="ansInput" data-element="7">" height="<input type="text"  id = "attr2_2" maxlength="3" class="ansInput" data-element="7">"&gt;</p>
-                            <button class = "verify" data-element="2">Submit Answer</button>
+                            <p>&lt;img src="Codour.jpg" width="<input type="text" id = "attr2_1" maxlength="3" class="ansInput" data-element="7" data-answer="250" data-group="2">" height="<input type="text"  id = "attr2_2" maxlength="3" class="ansInput" data-element="7" data-answer="400" data-group="2">"&gt;</p>
+                            <button class = "verify" id="2" onclick="checkAns(this.id)">Submit Answer</button>
                         </div>
-                        <div class = "answer">
+                        <div class = "answer" id="answer2">
                             <h3>Answer: </h3>
                             <p>Set the size of the image to 250 pixels wide and 400 pixels tall.</p>
                             <p>&lt;img src="Codour.jpg" width="<input type="text" maxlength="3" class="ansInput" value="250" data-element="7" readonly>" height="<input type="text" maxlength="3" class="ansInput" value="400" data-element="7" readonly>"&gt;</p>
@@ -1374,7 +1375,7 @@
                         <div class="question">
                             <p>
                                 Use the correct HTML attribute to display letters (uppercase ABC) instead of numbers.<br>
-                                &lt;ol <input type="text" id = "lists4_1" maxlength="8" class="ansInput" data-element="8" value="&lt;/ul&gt;">&gt;<br>
+                                &lt;ol <input type="text" id = "lists4_1" maxlength="8" class="ansInput" data-element="8">&gt;<br>
                                 &lt;li&gt;Coffee&lt;/li&gt;<br>
                                 &lt;li&gt;Tea&lt;/li&gt;<br>
                                 &lt;li&gt;Milk&lt;/li&gt;<br>
@@ -1384,7 +1385,7 @@
                         <div class="answer">
                             <p>
                                 Use the correct HTML attribute to display letters (uppercase ABC) instead of numbers.<br>
-                                &lt;ol <input type="text" maxlength="8" class="ansInput" data-element="8" value="&lt;/ul&gt;">&gt;<br>
+                                &lt;ol <input type="text" maxlength="8" class="ansInput" data-element="8" value="type=&quot;A&quot;" readonly>&gt;<br>
                                 &lt;li&gt;Coffee&lt;/li&gt;<br>
                                 &lt;li&gt;Tea&lt;/li&gt;<br>
                                 &lt;li&gt;Milk&lt;/li&gt;<br>
@@ -1395,7 +1396,28 @@
                 </div>
                 <div>
                     <div class="exerciseButton" id="exer55" data-element="mainExer55">Exercise 5</div>
-                    <div class="mainExer" id="mainExer55">Test 5</div>
+                    <div class="mainExer" id="mainExer55">
+                        <div class="question">
+                            <p>
+                                Use the correct HTML attribute to display uppercase roman numbers.<br>
+                                &lt;ol <input type="text" maxlength="8" class="ansInput" data-element="8">&gt;<br>
+                                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                                &lt;li&gt;Tea&lt;/li&gt;<br>
+                                &lt;li&gt;Milk&lt;/li&gt;<br>
+                                &lt;/ol&gt;<br>
+                            </p>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Use the correct HTML attribute to display uppercase roman numbers.<br>
+                                &lt;ol <input type="text" maxlength="8" class="ansInput" data-element="8" value="type=&quot;I&quot;">&gt;<br>
+                                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                                &lt;li&gt;Tea&lt;/li&gt;<br>
+                                &lt;li&gt;Milk&lt;/li&gt;<br>
+                                &lt;/ol&gt;<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="toggleSection" style="display: none;" id="13e">
